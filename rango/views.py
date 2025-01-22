@@ -3,9 +3,14 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def index(request):
-    #Excercise 3 added the <a... part
-    return HttpResponse("Rango says hey there partner! <a href='/rango/about/'>About</a>")#, 'rango/index.html')
-
+    # Construct a dictionary to pass to the template engine as its context.
+    # Note the key boldmessage matches to {{ boldmessage }} in the template!
+    context_dict = {'boldmessage': 'Crunch, creamy, cookie, candy, cupcake!'}
+    
+    # Return a rendered response to send to the client.
+    # We make sue of the shortcut function to make our lives easier.
+    # Note that the first parameter is the template we wish to use.
+    return render(request, 'rango/index.html', context=context_dict)
 
 
 #Excersis 3: Added the <a... part and the about part
