@@ -13,7 +13,6 @@ def index(request):
     return render(request, 'rango/index.html', context=context_dict)
 
 
-#Excersis 3: Added the <a... part and the about part
 def about(request):
     return render(request, 'rango/about.html')
     return HttpResponse("Rango says here is the about page. <a href='/rango/'>Index</a>.")
