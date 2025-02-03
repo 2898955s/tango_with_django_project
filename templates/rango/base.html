@@ -17,13 +17,14 @@
     </head>
     <body>
         <div>
+            
         <!-- Page specific content goes here -->
          {% block body_block %}
             This is the body_block's default content.
          {% endblock %}
 
             {% block sidebar_block %}
-                {% get_category_list %}
+                {% get_category_list category %}
             {% endblock %}
         </div>
 
