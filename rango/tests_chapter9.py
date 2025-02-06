@@ -530,6 +530,7 @@ class Chapter9ExerciseTests(TestCase):
         self.client.login(username='testuser', password='testabc123')
         request = self.client.get(reverse('rango:restricted'))
         content = request.content.decode('utf-8')
+
         self.assertTrue(re.search(full_title_pattern, content), f"{FAILURE_HEADER}The <title> of the response for 'rango:restricted' is not correct. Check your restricted.html template, and try again.{FAILURE_FOOTER}")
         self.assertTrue(re.search(block_title_pattern, template_str), f"{FAILURE_HEADER}Is restricted.html using template inheritance? Is your <title> block correct?{FAILURE_FOOTER}")
     

@@ -7,9 +7,9 @@
 
 {% block body_block %}
     <h1>Restricted Page</h1>
-    <div></div>
-    <a href="{% url 'rango:restricted' %}">Restricted Page</a><br />
-
-    <form id="user_form" method="post" action="{% url 'rango:restricted' %}" enctype="multipart/form-data">
-
+    <div>
+        <a href="{% url 'rango:restricted' %}">Restricted Page</a><br />
+        <form id="user_form" method="post" action="{% url 'rango:restricted' %}" enctype="multipart/form-data">
+    
+    </div>
 {% endblock %}
